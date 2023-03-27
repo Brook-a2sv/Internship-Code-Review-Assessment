@@ -2,13 +2,16 @@
 import math
 
 
-class Circle:
+class CircleMeasurement:
     def __init__(self, radius):
         self.radius = radius
-    def Parameter(self):
+
+    # calculae circumference of a circle
+    def CircleCircumference(self):
         return 2 * math.pi * self.radius
     
-    def calculateArea(radius):
+    # calculae area of a circle
+    def CircleArea(radius):
         return 3.14 * radius ** 2
 
 class Oprerations:
