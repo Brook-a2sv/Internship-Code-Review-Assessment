@@ -1,4 +1,3 @@
-
 count = 0
 
 # incremets the value of the global variable count
@@ -25,3 +24,5 @@ def divide_numbers(a, b):
 
 increment_count()
 print(count)
+
+
