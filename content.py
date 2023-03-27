@@ -1,26 +1,22 @@
-count = 0
+def is_valid_parenthesis(s):
+    dc = {
+        '(': ')',
+          "{": "}",
+         '[': ']'
 
+    }
+    stack = []
+    for i in s:
+        if i in dc.keys(): stack.append(i)
+        else:
+            if len(stack) == 0:
+                return False
+            
 
-def increment_count():
-    # incremets the value of the global variable count
-    global count
-    count += 1
-
-
-def product(x, y):
-    # multiplies two numbers
-    return x * y
-
-
-def divide_numbers(a, b):
-    # divides two numbers
-    return a / b
-
-
-def calculateArea(radius):
-    # calculates the area of a circle with a given radius
-    return 3.14 * radius ** 2
-
-
-increment_count()
-print(count)
+            op = stack.pop()
+            if dc[op] != i:
+                return False
+    if len(stack) != 0:
+        return False
+    
+    return True
