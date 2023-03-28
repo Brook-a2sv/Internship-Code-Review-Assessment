@@ -1,22 +1,16 @@
-def is_valid_parenthesis(s):
-    dc = {
-        '(': ')',
-          "{": "}",
-         '[': ']'
 
-    }
-    stack = []
-    for i in s:
-        if i in dc.keys(): stack.append(i)
-        else:
-            if len(stack) == 0:
-                return False
-            
+def get_square(number):
+    return number ** 2
 
-            op = stack.pop()
-            if dc[op] != i:
-                return False
-    if len(stack) != 0:
-        return False
-    
-    return True
+def get_cubes(numbers):
+    cubes = []
+    for number in numbers:
+        cubes.append(number ** 3)
+    return cubes
+
+my_numbers = [1, 2, 3, 4, 5]
+squares = []
+for number in my_numbers:
+    squares.append(get_square(number))
+
+cubes = get_cubes(my_numbers)
